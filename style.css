@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    height: 100px;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 5s linear infinite;
+}
+@keyframes animate {
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+#progressbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+
+#progressbar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(20px);
+}
+/* ---------------------------header------------------------------ */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bpic.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    margin: 10px 10%;
+}
+
+#header .container nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+#header .container nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: cyan;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.7s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text p {
+    font-size: large;
+}
+
+.header-text h1 {
+    margin: 4px 0;
+    font-size: 50px;
+
+}
+
+.header-text h1 span {
+    color: cyan;
+}
+
+i.do_nut{
+    display: none;
+}
+
+/* --------------------------------------about----------------------------------- */
+#about {
+    padding: 80px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    flex-basis: 35%;
+}
+
+.col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.col-2 {
+    flex-basis: 60%;
+}
+
+.about_me {
+    font-weight: 600;
+    font-size: 60px;
+    color: white;
+}
+
+.tags {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tag1 {
+    margin-right: 50px;
+    /* margin-right: 50px; */
+    font-weight: 800;
+    position: relative;
+    cursor: pointer;
+}
+
+.tag1::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: cyan;
+    transition: 0.7s;
+}
+
+.tag1.active-link::after {
+    width: 60%;
+}
+
+.tags .tag1:hover::after {
+    width: 100%;
+}
+
+.tag-containt {
+    font-size: large;
+}
+
+.tag-containt li span {
+    color: rgb(10, 181, 181);
+}
+
+.tag-containt li {
+    margin: 8px 0;
+}
+
+.tag-containt {
+    display: none;
+}
+
+.tag-containt.active {
+    display: block;
+}
+
+/* ------------------services---------------------- */
+.about_me.center {
+    margin: auto;
+}
+
+#services {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background-color: #262626;
+    border-radius: 9px;
+    padding: 40px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: cyan;
+}
+
+.services-list h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.services-list p {
+    margin-bottom: 4px;
+    font-weight: 400;
+}
+
+.services-list a {
+    display: inline-block;
+    color: white;
+}
+
+.services-list div:hover {
+    opacity: 0.8;
+    background: #fa0754;
+    transform: translateY(-10px);
+}
+.services-list div:hover p{
+    font-weight: 600;
+}
+.services-list div:hover i {
+    color: #ff004F;
+}
+
+/* -----------------------------contact------------------------------------ */
+.contact-left {
+    flex-basis: 30%;
+}
+
+.contact-left p {
+    margin: 10px 6px;
+    font-weight: 600;
+}
+
+.contact-left p i {
+    color: rgb(168, 255, 255);
+}
+
+.contact-left p i:hover {
+    color: #a93258;
+}
+
+.contact-right {
+    flex-basis: 50%;
+}
+
+.social-media {
+    margin-top: 15px;
+}
+
+.social-media i {
+    font-size: xx-large;
+    margin-right: 10px;
+    color: rgb(168, 255, 255);
+    transition: transform 0.5s;
+}
+
+.social-media i:hover {
+    color: #a93258;
+    transform: translateY(-5px);
+}
+
+.btn {
+    margin: 23px 0px;
+    width: 52%;
+    height: 8%;
+    border-radius: 5px;
+    background-color: #ff004F;
+    cursor: pointer;
+}
+
+.btn a {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+
+.contact-right form {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.contact-right label {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.contact-right .mg {
+    margin: 10px 0;
+    padding: 5px 9px;
+    width: 100%;
+}
+
+.contact-right .in_w {
+    width: 60%;
+}
+
+.btn2 {
+    height: 35px;
+    color: white;
+    font-weight: 600;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+span#msg{
+    color: #4dfbfbf2;
+    margin-top: -17px;
+    display: block;
+}
+
+footer {
+    background-color: rgb(43, 43, 43);
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
+
+footer p {
+    font-size: small;
+    font-weight: 600;
+}
+
+/* ----------------------- Phone user------------------------- */
+@media only screen  and (max-width: 1020px) and (min-width: 768px){
+    #header {
+        width: 100%;
+        height: 100vh;
+        background-image: url(images/bpict.png);
+    }
+    .header-text {
+        margin-top: 63%;
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url("images/bp-pic.png");
+    }
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+    .header-text {
+        margin-top: 105%;
+    }
+
+    .header-text h1 {
+        font-size: large;
+    }
+
+    i.do_nut{
+        display: block;
+        font-size: x-large;
+    }
+    .tag1 {
+        margin-right: 45px;
+    }
+    nav ul {
+        background-color: #ff004F;
+        position: fixed;
+        top: 0;
+        right: -50%;
+        width: 50%;
+        height: 100vh;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        transition: right 0.7s;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 25px !important;
+    }
+
+    .col-1 {
+        flex-basis: 100%;
+    }
+
+    .col-2 {
+
+        flex-basis: 100%;
+    }
+    p{
+        font-size: small;
+    }
+    .mg {
+        width: 199% !important;
+    }
+    /* .col2_p{
+        font-size: small;
+    } */
+}
+
+@media only screen and (max-width: 360px) {
+    .header-text {
+        margin-top: 107%;
+    }
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+    #about .container {
+        margin: 10px 4%;
+    }
+
+    .col-2 {
+        font-size: small;
+    }
+
+    .tag1 {
+        margin-right: 50px;
+    }
+    p{
+        font-size: small;
+    }
+    .tag-containt ul {
+        margin-left: 12px;
+        font-size: initial;
+    }
+
+    .mg {
+        width: 199% !important;
+    }
+    .about_me {
+        font-size: 50px;
+    }
+    footer p {
+        font-size: small;
+        font-weight: 600;
+    }
+}
+
+
+@media only screen and (max-width: 280px) {
+    .header-text {
+        margin-top: 105%;
+    }
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+    .header-text p {
+        font-size: small;
+    }
+    p{
+        font-size: small;
+    }
+    .about_me {
+        font-weight: 600;
+        font-size: 50px;
+        color: white;
+    }
+
+    .tag1 {
+        margin-right: 35px;
+    }
+
+    .services-list {
+        grid-template-columns: repeat(auto-fit, minmax(243px, 1fr));
+    }
+
+    .container {
+        margin: 10px 6%;
+    }
+
+    .services-list div {
+        padding: 29px;
+    }
+
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Lalit Joshi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/464cb82f62.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="progressbar"> </div>
+    <div id="header">
+
+        <div class="container">
+            <nav>
+               
+
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="feedback.html" >Feedback</a></li>
+                    <li><i class="fa-sharp fa-solid fa-circle-xmark do_nut" onclick="closemenu()"></i></li>
+                </ul>
+                <i class="fa-solid fa-bars do_nut" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>FrontEnd developer</p>
+                <h1>Hi, I'm <span>Lalit Joshi</span><br>From Gondia, Maharashtra.</h1>
+                <p>Enthusiast to work in Java, FrontEnd.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ------------------------------------About---------------------------------------- -->
+    <div id="about">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <img src="images/pic1.jpeg" class="user">
+                </div>
+                <div class="col-2">
+                    <h1 class="about_me">About Me</h1>
+                    <p class="col2_p">Hii I'm Lalit and my initial "L" stands for "loyal-to-work". I have done my degree from Savitrabai Phule Pune University (SPPU).
+                        in Computer Engineering stream. I am also active in some extra-curricular activities, for example I like to swim and play in my spare time
+                        And also participated in blood donation camp.<br>
+                        Details are as follows:-
+                    </p>
+                    <div class="tags">
+                        <p class="tag1 active-link" onclick="opentag('skills')">Skills</p>
+                        <p class="tag1" onclick="opentag('experience')">Experience</p>
+                        <p class="tag1" onclick="opentag('education')">Education</p>
+                    </div>
+                    <div class="tag-containt active" id="skills">
+                        <ul>
+                            <li><span>Java</span><br>
+                                Ready to Work on Java Projects</li>
+                            <li><span>FrontEnd</span><br>
+                                Develop user Interface</li>
+                        </ul>
+                    </div>
+                    <div class="tag-containt" id="experience">
+                        <ul>
+                            <li><span>Fresher</span><br>
+                                Worked on some mini-projects</li>
+                        </ul>
+                    </div>
+                    <div class="tag-containt" id="education">
+                        <ul>
+                            <li><span>Under-Graduate</span><br>
+                                Completed B.E From Savitribai Phule Pune University in 2022</li>
+                            <li><span>Higher Secondary</span><br>
+                                Completed From Maharashtra State Board Education in 2018</li>
+                            <li><span>Secondary</span><br>
+                                Completed From Maharashtra State Board Education in 2016</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- ----------------------------------------------services------------------------------------------------------------ -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="about_me">Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>FrontEnd</h2>
+                    <p>In software engineering, the terms frontend and backend (or sometimes referred to as back end or back-end) refer to the 
+                        separation of concerns between the presentation layer (frontend), and the data access layer (backend) of a piece of 
+                        software, or the physical infrastructure or hardware.</p>
+                    <a href="https://en.wikipedia.org/wiki/Front_end" target="_blank">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-java"></i>
+                    <h2>Java</h2>
+                    <p>Whether you are working on a new cutting edge app or simply ramping up on new technology, 
+                        Java documentation has all the information you need to make your project a smashing success.</p>
+                    <a href="https://docs.oracle.com/en/java/" target="_blank">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>UI/UX</h2>
+                    <p>User interface (UI) design or user interface engineering is the design of user interfaces for machines and software, 
+                        such as computers, home appliances, mobile devices, and other electronic devices,
+                         with the focus on maximizing usability and the user experience.</p>
+                    <a href="https://en.wikipedia.org/wiki/User_interface_design" target="_blank">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------Contact-------------------------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="about_me">Contact</h1>
+
+                    <p><i class="fa-solid fa-envelope-circle-check"></i> &nbsp&nbsp lalitjoshi2507@gmail.com</p>
+                    <p><i class="fa-solid fa-envelope"></i> &nbsp&nbsp lj4269004@gmail.com</p>
+                    <p><i class="fa-brands fa-github-alt"></i> &nbsp&nbsp https://github.com/LalitJoshi25</p>
+                    <p><i class="fa-sharp fa-solid fa-phone"></i> &nbsp&nbsp 9359620474</p>
+                    <div class="social-media">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                    <button class="btn">
+                        <a href="images/new+cv.pdf" download>Download CV</a>
+                    </button>
+                </div>
+                <div class="contact-right">
+                    <form action="" name="submit-to-google-sheet">
+                        <label for="name">Name</label><br>
+                        <input type="text" name="name" class="mg in_w" id="name" placeholder="Full Name" required><br>
+                        <label for="email">Email Id</label><br>
+                        <input type="email" name="email" class="mg in_w" id="email" placeholder="acb@gmail.com" required><br>
+                        <label for="contact">Contact</label><br>
+                        <input type="text" name="contact" class="mg in_w" id="contact" placeholder="1234567890" required><br>
+                        <label for="message">Message</label><br>
+                        <textarea name="message" class="mg" id="message" rows="6" placeholder="Message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>portfolio website clonecopyright&#169 lj42;</p>
+    </footer>
+
+    <script type="text/javascript">
+        let progress = document.getElementById('progressbar');
+        let totalheight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function() {
+            let progressHeight = (window.pageYOffset / totalheight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
+
+    <script>
+        var tag1 = document.getElementsByClassName("tag1");
+        var tagcontaints = document.getElementsByClassName("tag-containt");
+        function opentag(tagname) {
+            for (tag of tag1) {
+                tag.classList.remove("active-link");
+            }
+            for (tagcontaint of tagcontaints) {
+                tagcontaint.classList.remove("active");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tagname).classList.add("active");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-50%";
+        }
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyRZmHC7zBBNv8HFkBHxe8Ogr3i7mzjagF5ShzioQT8TSTz_ZfJMFMnkGOHGBmT2YxY/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML=" Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+    })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+
+</html>
